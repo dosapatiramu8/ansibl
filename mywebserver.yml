@@ -6,4 +6,17 @@
     apt :
      name : tree
      state : present
+    tags: webserver
+
+  - name : i want to create a file
+    file :
+        path : /home/ubuntu/mytestfile
+        state: touch
+
+        
+  - name : copy dynamic file
+    template:
+        src: myindexfile.j2
+        dest: /var/www/html    
+     
   
